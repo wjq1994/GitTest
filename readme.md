@@ -38,3 +38,12 @@ git rebase --edit-todo
 //fix完成之后
 git rebase --continue
 ```
+
+## 本地（没有git版本）传到远程仓库
+```
+git init
+git remote add origin https://github.com/wjq1994/react-learn.git
+git add .
+git commit -m ''
+git push -u origin master
+```
