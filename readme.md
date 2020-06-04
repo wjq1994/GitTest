@@ -48,5 +48,16 @@ git commit -m ''
 git push -u origin master
 ```
 
-# woshiaaaaa
+## git rebase
+
+> 合并commit
+
+1. 本地
+    ```
+    git rebase -i HEAD~3
+    ```
+2. 远程
+   ```
+   git push -f origin develop
+   ```
 
