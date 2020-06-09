@@ -61,3 +61,13 @@ git push -u origin master
    git push -f origin develop
    ```
 
+## git stash
+
+```
+git stash                         //暂存
+git stash save '描述'             //暂存并添加描述
+git stash list                   //暂存记录
+git stash pop                    //取出暂存第一条并删除
+git stash drop  stash@{0}        //删除指定暂存
+git stash apply stash@{0}        //取出指定暂存不删除
+```
