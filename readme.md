@@ -71,3 +71,9 @@ git stash pop                    //取出暂存第一条并删除
 git stash drop  stash@{0}        //删除指定暂存
 git stash apply stash@{0}        //取出指定暂存不删除
 ```
+
+## 远程删除的分支在你本地仓库也将被删除
+
+```
+git remote prune origin
+```
