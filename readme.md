@@ -25,4 +25,25 @@
 2. 删除远程分支 git push origin --delete [branchname] 
 
 ## 撤销本地更改
-```git checkout .```
+```
+	git checkout .
+```
+
+## 合并commit
+```
+git rebase -i HEAD~5 (合并最近五次提交)
+
+//当合并出错时 进行fix
+git rebase --edit-todo
+//fix完成之后
+git rebase --continue
+```
+
+## 本地（没有git版本）传到远程仓库
+```
+git init
+git remote add origin https://github.com/wjq1994/react-learn.git
+git add .
+git commit -m ''
+git push -u origin master
+```
