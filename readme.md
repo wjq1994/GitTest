@@ -77,3 +77,11 @@ git stash apply stash@{0}        //取出指定暂存不删除
 ```
 git remote prune origin
 ```
+
+## 恢复误删远程分支
+
+```
+git reflog --date=iso
+git checkout -b recovery_branch_name commitid
+git push  origin recovery_branch_name 
+```
