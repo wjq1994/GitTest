@@ -47,3 +47,41 @@ git add .
 git commit -m ''
 git push -u origin master
 ```
+
+## git rebase
+
+> 合并commit
+
+1. 本地
+    ```
+    git rebase -i HEAD~3
+    ```
+2. 远程
+   ```
+   git push -f origin develop
+   ```
+
+## git stash
+
+```
+git stash                         //暂存
+git stash save '描述'             //暂存并添加描述
+git stash list                   //暂存记录
+git stash pop                    //取出暂存第一条并删除
+git stash drop  stash@{0}        //删除指定暂存
+git stash apply stash@{0}        //取出指定暂存不删除
+```
+
+## 远程删除的分支在你本地仓库也将被删除
+
+```
+git remote prune origin
+```
+
+## 恢复误删远程分支
+
+```
+git reflog --date=iso
+git checkout -b recovery_branch_name commitid
+git push  origin recovery_branch_name 
+```
