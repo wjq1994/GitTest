@@ -85,3 +85,14 @@ git reflog --date=iso
 git checkout -b recovery_branch_name commitid
 git push  origin recovery_branch_name 
 ```
+
+## git reset 和 git revert的区别
+
+```
+git reset 原理是移动HEAD指针，HEAD时间线之后的版本都将去掉(git log可以发现)
+可以通过git reflog命令查看历史操作记录，进行恢复HEAD时间线之后的版本
+提交远程是git push -f
+但是其他人从远程仓库拉下来的代码就看不到HEAD时间线之后的版本了, 就算知道HEAD时间线之后的版本id也无法操作
+git revert -n 相当于是生成了新的版本
+提交远程是git push
+```
