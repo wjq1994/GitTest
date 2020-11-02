@@ -52,3 +52,10 @@ git push --recurse-submodules=check
 
 如果任何提交的子模块改动没有推送那么 “check” 选项会直接使 push 操作失败。如果你想要对所有推送都执行检查，那么可以通过设置 git config push.recurseSubmodules check 让它成为默认行为。
 
+# 更新子模块化后，生成的.diff文件(疑惑)
+
+每次更新完子模块后，生成的diff文件，在目录结构中找不到，需要使用-am参数，不用push，即可解决。
+
+```
+git commit -am "---"
+```
